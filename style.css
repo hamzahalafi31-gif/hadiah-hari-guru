@@ -1,0 +1,722 @@
+
+/* =========================================
+   HARI GURU - SPECIAL FOR UMI
+   Theme: Elegant Navy Blue & Gold
+========================================= */
+
+:root {
+    --navy: #071426;
+    --navy-light: #102440;
+    --gold: #d9b46b;
+    --gold-light: #f4d99d;
+    --white: #ffffff;
+    --text: #d4d9e3;
+    --paper: #fffdf7;
+    --ink: #465064;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--gold);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+}
+
+.nav-label {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 85vh;
+    padding: 70px 9% 100px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: slideUp 1.2s ease both;
+}
+
+.small-title {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.small-title span {
+    width: 35px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(45px, 5.5vw, 76px);
+    line-height: 1.12;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold);
+    font-style: italic;
+}
+
+.hero-description {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 2;
+    max-width: 540px;
+    margin-bottom: 38px;
+    font-weight: 300;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gold-button {
+    padding: 16px 25px;
+    background: linear-gradient(135deg, #f0d49a, #b88a40);
+    color: #071426;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.gold-button span {
+    margin-left: 15px;
+}
+
+.gold-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px #d9b46b40;
+}
+
+.music-button {
+    padding: 15px 20px;
+    background: transparent;
+    border: 1px solid #d9b46b80;
+    color: var(--gold-light);
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.music-button:hover {
+    background: #d9b46b15;
+}
+
+#musicIcon {
+    margin-right: 8px;
+}
+
+/* =========================================
+   HERO FOOTER
+========================================= */
+
+.hero-footer {
+    display: flex;
+    gap: 35px;
+    margin-top: 65px;
+    color: #8290a5;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+/* =========================================
+   PHOTO SECTION
+========================================= */
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 480px;
+    animation: fadeIn 1.5s ease both;
+}
+
+.image-frame {
+    width: min(100%, 360px);
+    height: 450px;
+    padding: 12px;
+    border: 1px solid var(--gold);
+    position: relative;
+    z-index: 2;
+    background: #102440;
+    box-shadow: 0 20px 70px #00000055;
+}
+
+.image-placeholder {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(145deg, #1b3658, #0a192d);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #d9b46b50;
+}
+
+.photo-icon {
+    font-size: 55px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.image-placeholder h3 {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--gold-light);
+    font-size: 35px;
+}
+
+.image-placeholder p {
+    font-size: 10px;
+    color: #aab6c8;
+    margin-top: 10px;
+}
+
+#umiPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-note {
+    position: absolute;
+    bottom: 45px;
+    left: -35px;
+    background: #142944;
+    border: 1px solid #d9b46b80;
+    padding: 17px 23px;
+    color: var(--gold-light);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    z-index: 3;
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-note span {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+.gold-circle {
+    width: 380px;
+    height: 380px;
+    border: 1px solid #d9b46b40;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* =========================================
+   LETTER SECTION
+========================================= */
+
+.letter-section {
+    width: 100%;
+    padding: 65px 20px 100px;
+    position: relative;
+}
+
+.letter-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Judul surat */
+
+.letter-heading {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.letter-subtitle {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 16px;
+}
+
+.letter-heading h2 {
+    color: var(--white);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(32px, 4.5vw, 46px);
+    line-height: 1.25;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.letter-author {
+    color: var(--gold-light);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* =========================================
+   LETTER PAPER
+========================================= */
+
+.letter-paper {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 70px 75px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(218, 190, 130, 0.13),
+            transparent 35%
+        ),
+        var(--paper);
+
+    color: var(--ink);
+
+    border: 1px solid #d8bd7b;
+    border-radius: 10px;
+    outline: 1px solid rgba(216, 189, 123, 0.35);
+    outline-offset: 6px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.28),
+        0 8px 25px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.letter-paper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 35px 85px rgba(0, 0, 0, 0.3);
+}
+
+/* Garis emas atas */
+
+.letter-paper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #a98238,
+        #f4d995,
+        #a98238
+    );
+}
+
+/* Ornamen sudut */
+
+.letter-paper::after {
+    content: "✦";
+    position: absolute;
+    top: 20px;
+    right: 27px;
+    color: #c5a45e;
+    font-size: 25px;
+}
+
+/* =========================================
+   LETTER CONTENT
+========================================= */
+
+.letter-paper p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 2.15;
+    letter-spacing: 0.1px;
+    color: #465064;
+    text-align: justify;
+    margin-bottom: 23px;
+}
+
+.letter-paper p strong {
+    color: #9b7838;
+    font-weight: 600;
+}
+
+/* Salam pembuka */
+
+.letter-paper .letter-greeting {
+    text-align: center;
+    color: #a27d3e;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 38px;
+}
+
+/* Penutup surat */
+
+.letter-paper .letter-closing {
+    margin-top: 35px;
+    padding-top: 15px;
+    color: #253958;
+    font-weight: 500;
+}
+
+/* Tanda tangan */
+
+.letter-paper .signature {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding-top: 28px;
+
+    border-top: 1px solid rgba(169, 130, 56, 0.35);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.8;
+    color: #8c713f;
+}
+
+.letter-paper .signature strong {
+    font-size: 24px;
+    line-height: 1.4;
+    color: #9b7838;
+    font-style: normal;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #050e1b;
+    padding: 30px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #8996a9;
+    font-size: 10px;
+}
+
+footer span {
+    color: var(--gold);
+    letter-spacing: 3px;
+}
+
+/* =========================================
+   PARTICLES
+========================================= */
+
+.particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    display: block;
+    background: #e7c77f;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #e7c77f;
+    opacity: 0;
+    animation: sparkle infinite ease-in-out;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translateY(-35px) scale(1.2);
+    }
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 22px 6%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 7%;
+        gap: 50px;
+    }
+
+    .hero-visual {
+        min-height: 430px;
+    }
+
+    .image-frame {
+        width: min(85%, 340px);
+        height: 400px;
+    }
+
+    .floating-note {
+        left: 0;
+    }
+
+    .hero-footer {
+        margin-top: 45px;
+    }
+
+    footer {
+        padding: 25px 6%;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .nav-label {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .hero {
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 47px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-footer {
+        gap: 15px;
+        font-size: 8px;
+        flex-wrap: wrap;
+    }
+
+    .hero-visual {
+        min-height: 390px;
+    }
+
+    .image-frame {
+        height: 350px;
+    }
+
+    .gold-circle {
+        width: 290px;
+        height: 290px;
+    }
+
+    .floating-note {
+        bottom: 20px;
+        font-size: 17px;
+    }
+
+    /* Judul surat */
+
+    .letter-section {
+        padding: 50px 15px 70px;
+    }
+
+    .letter-heading {
+        margin-bottom: 30px;
+    }
+
+    .letter-subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .letter-heading h2 {
+        font-size: 30px;
+    }
+
+    .letter-author {
+        font-size: 16px;
+    }
+
+    /* Kertas surat */
+
+    .letter-paper {
+        padding: 45px 25px;
+        outline-offset: 4px;
+    }
+
+    .letter-paper p {
+        font-size: 13px;
+        line-height: 2;
+        margin-bottom: 19px;
+    }
+
+    .letter-paper .letter-greeting {
+        font-size: 17px;
+    }
+
+    .letter-paper .signature strong {
+        font-size: 20px;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .letter-heading h2 {
+        font-size: 27px;
+    }
+
+    .letter-paper {
+        padding: 40px 20px;
+    }
+
+    .letter-paper p {
+        font-size: 12px;
+    }
+}
